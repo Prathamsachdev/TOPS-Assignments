@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Q.1 Using console.log() print statements: -->
+     <script>
+        console.log("The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another.");
+        console.log("Mother Teresa once said, 'If you can't feed a hundred people, then feed just one.'");
+
+     </script>
+     <!-- Q.2 Check if typeof '10' is exactly equal to 10. If not, make it exactly equal. -->
+      <script>
+        let strNumber = '10';
+        var num = 10;
+        if (typeof strNumber !== typeof num) {
+            strNumber = Number(strNumber);
+        }
+        console.log(strNumber === num); 
+
+      </script>
+
+      <!-- Q.3 JavaScript program to find the area of a triangle: -->
+       <script>
+        function areaOfTriangle(base, height) {
+            return (base * height) / 2;
+        }
+        console.log("Area of Triangle: " + areaOfTriangle(10, 5));
+
+       </script>
+
+       <!-- Q.4 JavaScript program to calculate days left until next Christmas: -->
+
+       <script>
+        function daysUntilChristmas() {
+                const today = new Date();
+                const christmas = new Date(today.getFullYear(), 11, 25); // December 25
+                if (today > christmas) {
+                    christmas.setFullYear(christmas.getFullYear() + 1);
+                }
+                const diffTime = christmas - today;
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                return diffDays;
+            }
+            console.log("Days until Christmas: " + daysUntilChristmas());
+
+       </script>
+
+       <!-- Q.5 What is a Conditional Statement? -->
+            <p>A conditional statement is used in programming to perform different actions 
+                based on certain conditions. Common conditional statements in JavaScript 
+                include if, else if, else, and switch statements.</p>
+
+        
+        <!-- Q.6 Circumference of a Square (modified formula for rectangle): -->
+
+        <script>
+            let l = 5, w = 3;
+            let circumference = 2 * (l + w);
+            console.log("Circumference of Rectangle: " + circumference);
+
+        </script>
+
+        <!-- Q.7 Write a program to convert years into days and days into years: -->
+
+        <script>
+        function yearsToDays(years) {
+            return years * 365;
+        }
+        
+        function daysToYears(days) {
+            return days / 365;
+        }
+        
+        console.log("5 years in days: " + yearsToDays(5)); // Output: 1825 days
+        console.log("1825 days in years: " + daysToYears(1825)); // Output: 5 years
+        </script>
+
+        <!-- Q.8 Convert temperature from Fahrenheit to Celsius: -->
+         <script>
+         function fahrenheitToCelsius(fahrenheit) {
+            return (fahrenheit - 32) * 5 / 9;
+        }
+        
+        let fahrenheit = 98;
+        console.log(fahrenheit + "°F in Celsius is: " + fahrenheitToCelsius(fahrenheit).toFixed(2) + "°C");
+        </script>
+
+        <!-- Q.9 Write a program to get the extension of a filename: -->
+        <script>
+        function getFileExtension(filename) {
+            return filename.split('.').pop();
+        }
+        
+        console.log(getFileExtension("example.pdf")); // Output: "pdf"
+        console.log(getFileExtension("script.js"));   // Output: "js"
+        </script>
+
+        <!-- Q.10 What is the result of the expression (5 > 3 && 2 < 4)? -->
+         <script>
+         console.log(5 > 3 && 2 < 4); 
+         </script>
+
+         <!-- Q.11 What is the result of the expression (true && 1 && "hello")? -->
+          <script>
+          console.log(true && 1 && "hello"); 
+          </script>
+
+        <!-- Q.12 What is the result of the expression true && false || false && true? -->
+         <script>
+         console.log(true && false || false && true); // false
+        </script>
+
+        <!-- Q.13 Check if a number is positive or negative in JavaScript: -->
+         <script>
+         function checkPositiveNegative(number) {
+            if (number > 0) {
+                return "Positive";
+            } else if (number < 0) {
+                return "Negative";
+            } else {
+                return "Zero";
+            }
+        }
+        
+        console.log(checkPositiveNegative(10));  // Positive
+        console.log(checkPositiveNegative(-5));  // Negative
+        console.log(checkPositiveNegative(0));   // Zero
+        </script>
+
+        <!-- Q.14 Check if a character is a vowel or not: -->
+         <script>
+         function isVowel(char) {
+            return 'aeiouAEIOU'.includes(char);
+        }
+        
+        console.log(isVowel('a')); // true
+        console.log(isVowel('b')); // false
+        </script>
+
+        <!-- Q.15 Write to check whether a number is negative, positive, or zero: -->
+         <script>
+         function checkNumber(number) {
+            if (number > 0) return "Positive";
+            else if (number < 0) return "Negative";
+            else return "Zero";
+        }
+        
+        console.log(checkNumber(3));   // Positive
+        console.log(checkNumber(-2));  // Negative
+        console.log(checkNumber(0));   // Zero
+        </script>
+
+        <!-- Q.16 Check if a number is even or odd using the ternary operator: -->
+         <script>
+         function isEvenOrOdd(number) {
+            return number % 2 === 0 ? "Even" : "Odd";
+        }
+        
+        console.log(isEvenOrOdd(10)); // Even
+        console.log(isEvenOrOdd(7));  // Odd
+        </script>
+
+        <!-- Q.17 Find the maximum number among 3 numbers using the ternary operator: -->
+         <script>
+         function findMax(a, b, c) {
+            return a > b ? (a > c ? a : c) : (b > c ? b : c);
+        }
+        
+        console.log(findMax(3, 9, 5)); // 9
+        </script>
+
+        <!-- Q.18 Find the minimum number among 3 numbers using the ternary operator: -->
+         <script>
+         function findMin(a, b, c) {
+            return a < b ? (a < c ? a : c) : (b < c ? b : c);
+        }
+        
+        console.log(findMin(3, 9, 5)); // 3
+        </script>
+
+        <!-- Q.19 Find the largest of three numbers in JavaScript: -->
+         <script>
+         function largestOfThree(a, b, c) {
+            return Math.max(a, b, c);
+        }
+        
+        console.log(largestOfThree(10, 25, 15)); // 25
+        </script>
+
+        <!-- Q.20 Show:  i. Days of the week using switch case:    -->
+        <script>function dayOfWeek(day) {
+            switch(day) {
+                case 1: return "Monday";
+                case 2: return "Tuesday";
+                case 3: return "Wednesday";
+                case 4: return "Thursday";
+                case 5: return "Friday";
+                case 6: return "Saturday";
+                case 7: return "Sunday";
+                default: return "Invalid day";
+            }
+        }
+        
+        console.log(dayOfWeek(3)); // Wednesday
+        </script>
+
+        <!-- Q.20 Show: ii. Vowel or Consonant using switch case: -->
+         <script>
+         function checkVowelConsonant(char) {
+            char = char.toLowerCase();
+            switch(char) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    return "Vowel";
+                default:
+                    return "Consonant";
+            }
+        }
+        
+        console.log(checkVowelConsonant('a')); // Vowel
+        console.log(checkVowelConsonant('b')); // Consonant
+        </script>
+
+        <!-- Q.21 What are the looping structures in JavaScript? Provide one example -->
+        <script>
+        for (let i = 1; i <= 5; i++) {
+            console.log(i);
+        }
+        // Output: 1 2 3 4 5
+        </script>
+
+        <!-- Q.22 Write a program to print numbers from 972 to 897 using a for loop: -->
+         <script>
+         for (let i = 972; i >= 897; i--) {
+            console.log(i);
+        }
+        </script>
+
+        <!-- Q.23 Write a program to print the factorial of a given number: -->
+         <script>
+         function factorial(n) {
+            let result = 1;
+            for (let i = 1; i <= n; i++) {
+                result *= i;
+            }
+            return result;
+        }
+        
+        console.log(factorial(5)); // Output: 120
+        </script>
+
+        <!-- Q.24 Write a program to print the Fibonacci series up to a given number: -->
+         <script>
+         function fibonacciSeries(n) {
+            let a = 0, b = 1, next;
+            console.log(a); 
+            console.log(b);
+        
+            for (let i = 2; i < n; i++) {
+                next = a + b;
+                console.log(next);
+                a = b;
+                b = next;
+            }
+        }
+        
+        fibonacciSeries(5);
+        // Output: 0, 1, 1, 2, 3
+        
+         </script>
+
+         <!-- Q.25 Write a program to print a number in reverse order (e.g., number = 64728 → reverse = 82746): -->
+          <script>
+          function reverseNumber(num) {
+            return parseInt(num.toString().split('').reverse().join(''));
+        }
+        
+        console.log(reverseNumber(64728)); // Output: 82746
+        </script>
+
+        <!-- Q.26 Write a program to find the summation of a given number (e.g., 1523 → sum = 11): -->
+         <script>
+         function sumOfDigits(num) {
+            return num.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+        }
+        
+        console.log(sumOfDigits(1523)); // Output: 11
+        </script>
+
+        <!-- Q.27 Write a program to find the summation of the first and last digits (e.g., 1234 → sum = 5): -->
+         <script>
+         function sumFirstLastDigit(num) {
+            let strNum = num.toString();
+            let firstDigit = parseInt(strNum[0]);
+            let lastDigit = parseInt(strNum[strNum.length - 1]);
+            return firstDigit + lastDigit;
+        }
+        
+        console.log(sumFirstLastDigit(1234)); // Output: 5
+        </script>
+
+        <!-- Q.28 Print the following pattern using console.log(): 
+            1 1 1 1 1
+            2 1 2 4 8
+            3 1 3 9 27
+            4 1 4 16 64
+            5 1 5 25 125
+        -->
+         <script>
+         for (let i = 1; i <= 5; i++) {
+            console.log(`${i} 1 ${i} ${i ** 2} ${i ** 3}`);
+         }
+        </script>
+
+         <!-- Q.29 Print the following patterns: 
+          Pattern 1:
+            1
+            1 0
+            1 0 1
+            1 0 1 0
+            1 0 1 0 1
+
+        -->
+            <script>
+            for (let i = 1; i <= 5; i++) {
+                let pattern = '';
+                for (let j = 1; j <= i; j++) {
+                    pattern += (j % 2) + ' ';
+                }
+                console.log(pattern.trim());
+            }
+            </script>
+
+            <!-- Pattern 2:
+                A
+                B C D
+                E F
+                G H I J
+                K L M N O
+                -->
+                <script>
+                let alph = 'A';
+                    for (let i = 1; i <= 5; i++) {
+                        let pattern = '';
+                        for (let j = 1; j <= i; j++) {
+                            pattern += alph + ' ';
+                            alph = String.fromCharCode(alph.charCodeAt(0) + 1);
+                        }
+                        console.log(pattern.trim());
+                    }
+                    </script>
+
+                    <!-- Pattern 3:
+                        1
+                        2 3
+                        4 5 6
+                        7 8 9 10
+                        11 12 13 14 15
+                    -->
+                        <script>
+                        let num = 1;
+                            for (let i = 1; i <= 5; i++) {
+                                let pattern = '';
+                                for (let j = 1; j <= i; j++) {
+                                    pattern += num + ' ';
+                                    num++;
+                                }
+                                console.log(pattern.trim());
+                            }
+                            </script>
+
+                            <!-- Pattern 4:
+                                *
+                                * *
+                                * * *
+                                * * * *
+                                * * * * *
+                             -->
+                                <script>
+                                for (let i = 1; i <= 5; i++) {
+                                    console.log('* '.repeat(i).trim());
+                                }
+                                </script>
+
+        
+    <!-- Q.30 Accept 3 numbers from the user using a while loop and check if each number is a palindrome: -->
+     <script>
+     function isPalindrome(num) {
+        let reversed = num.toString().split('').reverse().join('');
+        return num.toString() === reversed;
+    }
+    
+    let count = 0;
+    while (count < 3) {
+        let num = prompt("Enter a number:");
+        if (isPalindrome(num)) {
+            console.log(`${num} is a palindrome`);
+        } else {
+            console.log(`${num} is not a palindrome`);
+        }
+        count++;
+    }
+    </script>
+
+    <!-- Q.31 Write a JavaScript program to display the current day and time in the format: -->
+     <script>
+     function displayCurrentDayTime() {
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let date = new Date();
+        let day = days[date.getDay()];
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+        let seconds = date.getSeconds();
+        let ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12 || 12; // convert to 12-hour format
+    
+        console.log(`Today is ${day}. Current Time is ${hours} ${ampm}: ${minutes} : ${seconds}`);
+    }
+    
+    displayCurrentDayTime();
+    </script>
+
+    <!-- Q.32 Write a JavaScript program to get the current date: -->
+     <script>
+     function getCurrentDate() {
+        let date = new Date();
+        let day = date.getDate();
+        let month = date.getMonth() + 1; // Months are 0-based
+        let year = date.getFullYear();
+    
+        console.log(`Current date: ${day}-${month}-${year}`);
+    }
+    
+    getCurrentDate();
+    </script>
+
+    <!-- Q.33 Write a JavaScript program to compare two objects: -->
+     <script>
+     function areObjectsEqual(obj1, obj2) {
+        let keys1 = Object.keys(obj1);
+        let keys2 = Object.keys(obj2);
+    
+        if (keys1.length !== keys2.length) return false;
+    
+        for (let key of keys1) {
+            if (obj1[key] !== obj2[key]) return false;
+        }
+    
+        return true;
+    }
+    
+    let obj1 = { name: "John", age: 30 };
+    let obj2 = { name: "John", age: 30 };
+    console.log(areObjectsEqual(obj1, obj2)); // Output: true
+    </script>
+
+    <!-- Q.34 Write a JavaScript program to convert an array of objects into a CSV string: -->
+     <script>
+     function convertToCSV(data) {
+        const headers = Object.keys(data[0]).join(',');
+        const rows = data.map(row => Object.values(row).join(',')).join('\n');
+        return headers + '\n' + rows;
+    }
+    
+    let data = [
+        { name: "John", age: 25 },
+        { name: "Jane", age: 29 },
+        { name: "Jake", age: 21 }
+    ];
+    console.log(convertToCSV(data));
+    </script>
+
+    <!-- Q.35 Write a JavaScript program to capitalize the first letter of a string: -->
+     <script>
+     function capitalizeFirstLetter(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+    
+    console.log(capitalizeFirstLetter("hello")); // Output: Hello
+    </script>
+
+    <!-- Q.45 Write a JavaScript program to determine if a variable is an array: -->
+     <script>
+     function isArray(variable) {
+        return Array.isArray(variable);
+    }
+    
+    console.log(isArray([1, 2, 3])); // Output: true
+    console.log(isArray("hello"));   // Output: false
+    </script>
+
+    <!-- Q.46 Write a JavaScript program to clone an array: -->
+     <script>
+     function cloneArray(arr) {
+        return arr.slice();
+    }
+    
+    var original = [1, 2, 3];
+    let cloned = cloneArray(original);
+    console.log(cloned); // Output: [1, 2, 3]
+    </script>
+
+    <!-- Q.47 What is the drawback of declaring methods directly in JavaScript objects? -->
+     <p>When methods are declared directly in JavaScript objects, each instance of the object will 
+        have its own copy of the method, leading to higher memory consumption. Using prototypes, 
+        especially in constructor functions, allows methods to be shared across instances.</p>
+
+    <!-- Q.48 Print the length of a string on the browser console using console.log(): -->
+     <script>
+        var str = "Hello, World!";
+        console.log(str.length); // Output: 13
+        </script>
+
+        <!-- Q.49 Change all the string characters to capital letters using the toUpperCase() method: -->
+         <script>
+         let str = "hello world";
+            console.log(str.toUpperCase()); // Output: HELLO WORLD
+            </script>
+        
+        <!-- Q.50 What is the drawback of declaring methods directly in JavaScript objects? -->
+         <p>This is a repeat of Q.47. The answer remains that declaring methods directly in JavaScript
+             objects results in each instance having its own copy of the method, which is memory-inefficient
+              compared to shared methods using prototypes.</p>
+
+        <!-- Q.51 Write a JavaScript program to get the current date in formats: mm-dd-yyyy, mm/dd/yyyy, dd-mm-yyyy, dd/mm/yyyy: -->
+         <script>
+         function formatDate(date) {
+            let day = String(date.getDate()).padStart(2, '0');
+            let month = String(date.getMonth() + 1).padStart(2, '0');
+            let year = date.getFullYear();
+        
+            console.log(`${month}-${day}-${year}`);
+            console.log(`${month}/${day}/${year}`);
+            console.log(`${day}-${month}-${year}`);
+            console.log(`${day}/${month}/${year}`);
+        }
+        
+        formatDate(new Date());
+        </script>
+
+        <!-- Q.52 Use indexOf to determine the position of the first occurrence of "a" in "30 Days Of JavaScript": -->
+         <script>
+         let str = "30 Days Of JavaScript";
+            console.log(str.indexOf("a")); // Output: 3
+            </script>
+
+        <!-- Q.53 Use lastIndexOf to determine the position of the last occurrence of "a" in "30 Days Of JavaScript": -->
+         <script>
+         let str = "30 Days Of JavaScript";
+        console.log(str.lastIndexOf("a")); // Output: 14
+            </script>
+
+        <!-- Q.54 Form Validation in JavaScript -->
+        <form id="myForm" onsubmit="return validateForm()">
+            Name: <input type="text" id="name" required><br>
+            Email: <input type="email" id="email" required><br>
+            Age: <input type="number" id="age" required><br>
+            <input type="submit" value="Submit">
+        </form>
+        
+        <script>
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let age = document.getElementById("age").value;
+        
+            if (!name || !email || !age) {
+                alert("All fields are required.");
+                return false;
+            }
+            if (!email.includes("@")) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+            if (age < 0) {
+                alert("Age cannot be negative.");
+                return false;
+            }
+            return true;
+        }
+        </script>
+
+        <!-- Q.55 Form Validation for Email, Number, and Password -->
+        <form id="userForm" onsubmit="return validateForm()">
+            Email: <input type="email" id="email" required><br>
+            Phone Number: <input type="number" id="phone" required><br>
+            Password: <input type="password" id="password" required><br>
+            <input type="submit" value="Submit">
+        </form>
+        
+        <script>
+        function validateForm() {
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let password = document.getElementById("password").value;
+        
+            if (!email.includes("@")) {
+                alert("Invalid email format");
+                return false;
+            }
+            if (phone.length < 10 || phone.length > 15) {
+                alert("Phone number must be between 10 and 15 digits.");
+                return false;
+            }
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters.");
+                return false;
+            }
+            return true;
+        }
+        </script>
+
+        <!-- Q.56 Dynamic Form Validation in JavaScript -->
+        <form id="dynamicForm">
+            Username: <input type="text" id="username" oninput="validateUsername()"><br>
+            Email: <input type="email" id="email" oninput="validateEmail()"><br>
+            <p id="error-message"></p>
+            <input type="submit" value="Submit">
+        </form>
+        
+        <script>
+        function validateUsername() {
+            let username = document.getElementById("username").value;
+            if (username.length < 3) {
+                document.getElementById("error-message").innerText = "Username must be at least 3 characters.";
+            } else {
+                document.getElementById("error-message").innerText = "";
+            }
+        }
+        
+        function validateEmail() {
+            let email = document.getElementById("email").value;
+            if (!email.includes("@")) {
+                document.getElementById("error-message").innerText = "Invalid email format.";
+            } else {
+                document.getElementById("error-message").innerText = "";
+            }
+        }
+        </script>
+
+        <!-- Q.57 How Many Types of JS Events? How to Use Them? 
+                Mouse Events: onclick, ondblclick, onmouseover, onmouseout
+                Keyboard Events: onkeydown, onkeypress, onkeyup
+                Form Events: onsubmit, onchange, onfocus, onblur
+                Window Events: onload, onresize, onscroll
+         -->
+         <script>
+         <button onclick="alert('Button clicked!')">Click Me!</button>
+         </script>
+
+         <!-- Q.60 BOM vs DOM in JavaScript
+            DOM (Document Object Model): Represents the HTML structure of a web page, allowing JavaScript to manipulate elements.
+            BOM (Browser Object Model): Represents browser features outside the page content, like window, navigator, screen, location, and history.
+        -->
+            <script>
+            document.getElementById("example").innerText = "Hello, World!";
+            alert("Current page URL is " + window.location.href);
+            </script>
+
+        <!-- Q.61 Array vs Object Differences in JavaScript -->
+         <script>
+            // array
+            let array = [1, 2, 3];
+            console.log(array[0]); // Output: 1
+            // object
+            let obj = { name: "John", age: 30 };
+            console.log(obj.name); // Output: John
+
+         </script>
+
+         <!-- Q.62 Split a String into an Array Using split() Method -->
+          <script>
+            let str = "JavaScript is fun";
+            let arr = str.split(" ");
+            console.log(arr); // Output: ["JavaScript", "is", "fun"]
+            </script>
+
+            <!-- Q.63 Check if the String Contains a Word "Script" Using includes() Method -->
+             <script>
+                let str = "JavaScript is fun";
+                console.log(str.includes("Script")); // Output: true
+                </script>
+
+                <!-- Q.64 Change All String Characters to Lowercase Letters Using toLowerCase() Method -->
+                 <script>
+                    let str = "HELLO WORLD";
+                    console.log(str.toLowerCase()); // Output: hello world
+                    </script>
+
+                    <!-- Q.65 Character at Index 15 in "30 Days of JavaScript" String Using charAt() Method -->
+                     <script>
+                        let str = "30 Days of JavaScript";
+                        console.log(str.charAt(15)); // Output: "S"
+                        </script>
+
+                        <!-- Q.66 Copy One String to Another String in JavaScript -->
+                         <script>
+                         let original = "Hello, World!";
+                            let copy = original;
+                            console.log(copy); // Output: Hello, World!
+                            </script>
+</body>
+</html>
